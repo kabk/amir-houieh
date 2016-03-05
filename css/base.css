@@ -1,0 +1,120 @@
+
+*{
+    font-family: "Georgia";
+    font-weight: normal;
+    margin: 0;
+}
+
+body{
+    font-size: 12pt;
+}
+
+/*TYPOGRAPHY*/
+
+.c8 {
+    padding-top: 0pt;
+    padding-bottom: 0pt;
+    line-height: 1.0;
+    text-align: left;
+
+}
+
+/*first sentence indent */
+.c2 {
+    page-break-after: avoid;
+    orphans: 2;
+    text-indent: 36pt;
+    widows: 2
+}
+
+.c10 {
+    orphans: 2;
+    text-indent: 36pt;
+    widows: 2
+}
+
+.c1 {
+    orphans: 2;
+    widows: 2;
+    height: 13.2pt
+}
+
+.c5 {
+    margin-left: 36pt;
+    orphans: 2;
+    widows: 2
+}
+
+.c0 {
+    font-size: 12pt;
+}
+
+.c17 {
+    font-size: 22pt
+}
+
+.c6 {
+    vertical-align: super
+}
+
+.c4 {
+    font-style: italic
+}
+
+
+
+
+/*Print*/
+.c13 {
+    orphans: 2;
+    widows: 2
+}
+
+.c7 {
+    page-break-after: avoid;
+    orphans: 2;
+    widows: 2
+}
+.c23 {
+    page-break-after: avoid
+}
+
+
+.title {
+    padding-top: 0pt;
+    color: #000000;
+    font-weight: bold;
+    padding-bottom: 0pt;
+    line-height: 1.15;
+    page-break-after: avoid;
+    orphans: 2;
+    widows: 2;
+}
+
+p {
+    margin: 0;
+    color: #000000;
+}
+
+h1 {
+    padding-top: 0pt;
+    color: #000000;
+    padding-bottom: 0pt;
+    font-family: "Georgia";
+    line-height: 1.15;
+    page-break-after: avoid;
+    orphans: 2;
+    widows: 2;
+}
+
+h2 {
+    padding-top: 0pt;
+    color: #000000;
+    padding-bottom: 0pt;
+    font-family: "Georgia";
+    line-height: 1.15;
+    page-break-after: avoid;
+    font-style: italic;
+    orphans: 2;
+    widows: 2;
+}
