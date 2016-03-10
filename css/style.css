@@ -23,7 +23,7 @@ section {
 }
 
 /*content*/
-article#content, nav {
+article#content, #intro {
     margin-left: 4%;
     margin-right: 20%;
 }
@@ -38,17 +38,17 @@ article#content, nav {
     transition: transform 0.5s ease-in-out;
 }
 
-#content-wrapper.off{
-    -ms-transform: translateX(-220px); /* IE 9 */
-    -webkit-transform: translateX(-220px); /* Safari */
-    transform: translateX(-220px);
-}
-article#content {
-    margin-top: 150px;
-}
-
-span.navlink.title {
-    line-height: 2em;
+/*section#content-wrapper {*/
+    /*margin-top: 100%;*/
+/*}*/
+   #content-wrapper.off{
+       -ms-transform: translateX(-220px); /* IE 9 */
+       -webkit-transform: translateX(-220px); /* Safari */
+       transform: translateX(-220px);
+   }
+article#content{
+    /* margin-top: 100%; */
+    background: white;
 }
 
 /*.highlight:hover{ color: blue;}*/
@@ -98,7 +98,8 @@ figcaption {
 
 /*HEADER*/
 div#tc-content {
-    display: none;
+    /* display: none; */
+    font-size: small;
 }
 
 header {
@@ -112,10 +113,83 @@ header {
     position: fixed;
 }
 
-nav>span{
-    cursor: pointer;
+
+
+/* INTRO */
+h1#title *{
+    font-size: 62pt;
+    font-weight: bold;
 }
 
+article#intro {
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+#intro {
+    margin-top: 150px;
+}
+
+
+/*nav panel*/
+nav {
+    position: fixed;
+    width: 220px;
+}
+
+#tc-content>div {
+    display: block;
+}
+
+span.tc-subhead {
+    display: block;
+    margin-left: 12px;
+}
+
+span.tc-head:before {
+    content: "\A\A";
+    display: block;
+}
+
+
+div#tc-content.off .ts-text {
+    /*opacity: 0;*/
+    display: none;
+}
+
+#tc-content.off>div {
+    border-bottom: 3px solid yellow;
+}
+
+#tc-content.off span.tc-subhead {
+    border-bottom: 1px solid green;
+}
+
+nav.close {
+    background: white;
+    box-shadow: 0 0 0 0.75pt #d1d1d1,0 0 3pt 0.75pt #ccc;
+    width: 25px;
+
+}
+
+div#navHandlers {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background: blue;
+}
+
+
+.tagwrapper {
+    position: absolute;
+    font-size: 10px;
+    color: blue;
+}
+
+span.tag {
+    display: block;
+}
 
 
 @media all and (max-width: 1260px) and (min-width: 960px) {
@@ -162,7 +236,7 @@ nav>span{
         font-size: 18pt !important;
     }
 
-    article#content, nav {
+    article#content,#intro {
         margin-left: 4%;
         margin-right: 10%;
     }
