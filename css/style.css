@@ -71,7 +71,7 @@ img {
 }
 
 .ref_wrapper * {
-    font-family: sans-serif;
+    font-family: Andale Mono,AndaleMono,monospace;
     font-size: 12px;
     line-height: 1em;
 }
@@ -116,7 +116,7 @@ div#tc-content {
 
 header {
     font-size: 12px;
-    font-family: sans-serif;
+    font-family: Andale Mono,AndaleMono,monospace;
     z-index: 99999;
     width: 60%;
     max-width: 794px;
@@ -149,7 +149,7 @@ nav#site-nav{
     padding-top: 6pt;
 }
 nav#site-nav *{
-    font-family: sans-serif !important;
+    font-family: Andale Mono,AndaleMono,monospace !important;
     display: inline-block;
     color: blue;
 }
@@ -169,6 +169,10 @@ a.link {
 }
 a.link:after {content: "\00a0.\00a0";}
 
+#abstract{
+    font-size: 18pt;
+}
+
 
 /*NAV BAR*/
 nav#navbar {
@@ -186,11 +190,13 @@ span.tc-subhead {
 }
 
 span.tc-subhead:last-child {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 nav#navbar * {
-    font-family: sans-serif;
+    font-family: Andale Mono,AndaleMono,monospace;
+    line-height: 1.4em;
+
 }
 nav#navbar.mobile{
     right: 0;
