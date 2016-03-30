@@ -33,8 +33,9 @@
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
 
         <!-- scripts -->
-        <script src="js/jquery-2.1.0.min.js"></script>
+        <script src="js/jquery-2.2.2.min.js"></script>
         <script src="js/utils.js"></script>
+        <script src="js/navPanel.js"></script>
         <script src="js/init.js"></script>
 
     </head>
@@ -43,45 +44,78 @@
     <body class="">
 
     <!-- NAVIGATION -->
-    <header class="gradient-top hide"></header>
+    <header class="gradient-top">
+        <nav id="site-nav">
+        <a class="link" href="http://www.amirhouieh.info" target="_blank">me</a>
+        <ul id="tolbar">
 
+            <li id="extbar">
+                <a class="link" href="javascript:;" onclick="window.print();">Print</a>
+                <a class="link" href="mailto:amir.houirh@gmail.com?Subject=Design%20as%20Metadata" target="_top">Email</a>
+            </li>
 
-    <article id="intro">
-        <h1 class="title c5" id="title">Design as<br/>Metadata</h1>
-        <br><br><br>
-        <h1 class="c17 c2">Today the web has faced designers with a new paradigm in which the prior reader has become the user —the person who experiences the web content; produces content as well as consumes it. Therefore the user experiences and intentionality has transcended more than ever meaning the graphic designer has to become the future innovator in order to affect the message. Hence within my thesis in order to reflect upon the agency of the designer in contents of the web future; I propose an idea about implementation of design within the content as a metadata.</h1>
-
-
-        <nav>
-
-            <div id="navHandlers"></div>
-
-            <div id="tc-content">
-
-                <span class="tc-head"><span id="id1" class="ts-text">1.Introduction</span></span>
-
-                <span class="tc-head"><span id="id2" class="ts-text">2.Framework</span></span>
-                <span class="tc-subhead"><span  id="id2_1" class="ts-text">2.1 The agency of the author</span></span>
-                <span class="tc-subhead"><span  id="id2_2" class="ts-text">2.2 The Death of the Author</span></span>
-
-                <span class="tc-head"><span id="id3" class="ts-text">3. New container, new content</span></span>
-                <span class="tc-subhead"><span  id="id3_1" class="ts-text">3.1 Information revolution</span></span>
-                <span class="tc-subhead"><span  id="id3_2" class="ts-text">3.2 Web 1.0: Information Space</span></span>
-                <span class="tc-subhead"><span  id="id3_3" class="ts-text">3.3 Web 2.0: Interactivity</span></span>
-                <span class="tc-subhead"><span  id="id3_4" class="ts-text">3.4 Augmented content: augmented meaning</span></span>
-                <span class="tc-subhead"><span  id="id3_5" class="ts-text">3.5 Structuring the meaning: complex design Process</span></span>
-                <span class="tc-head"><span id="id4" class="ts-text">4. Designer, the future innovators </span></span>
-                <span class="tc-subhead"><span  id="id4_1" class="ts-text">4.1 Designer as a director</span></span>
-                <span class="tc-subhead"><span  id="id4_2" class="ts-text">4.2 Design in behavioral environment </span></span>
-                <span class="tc-subhead" style="height: 10%"><span  id="id4_3" class="ts-text">4.3 To sum up: Design as a Metadata</span></span>
-        </div>
+            <li id="sharebar">
+                <label>Share on</label>
+                <a class="link" href="http://www.facebook.com/sharer/sharer.php?u=http://kabk.github.io/govt-theses-16-amir-houieh-design-as-metadata" target="_blank">Facebook</a>
+                <a class="link" href="https://twitter.com/intent/tweet?text=Design as Metadata&url=http://kabk.github.io/govt-theses-16-amir-houieh-design-as-metadata&hashtag=graphicdesign" target="_blank">Twitter</a>
+                <a class="link" href="https://plus.google.com/share?url=http://kabk.github.io/govt-theses-16-amir-houieh-design-as-metadata" target="_blank">Google+</a>
+            </li>
+        </ul>
         </nav>
 
-    </article>
+    </header>
+
+
+    <!-- NAVBAR-->
+    <nav id="navbar">
+
+
+        <div id="mobile-handler">+</div>
+
+        <div id="bar" class="hide"></div>
+
+        <div id="tc-content" class="">
+
+            <span class="tc-head"><span class="ts-text link">1.Introduction</span></span>
+
+            <span class="tc-head">
+                <span class="ts-text link">2.Framework</span>
+                <span class="tc-subhead link"><span  class="ts-text">2.1 The agency of the author</span></span>
+                <span class="tc-subhead link"><span  class="ts-text">2.2 The Death of the Author</span></span>
+            </span>
+
+
+            <span class="tc-head">
+                <span class="ts-text link">3. New container, new content</span>
+                <span class="tc-subhead link"><span  class="ts-text">3.1 Information revolution</span></span>
+                <span class="tc-subhead link"><span  class="ts-text">3.2 Web 1.0: Information Space</span></span>
+                <span class="tc-subhead link"><span  class="ts-text">3.3 Web 2.0: Interactivity</span></span>
+                <span class="tc-subhead link"><span  class="ts-text">3.4 Augmented content: augmented meaning</span></span>
+                <span class="tc-subhead link"><span  class="ts-text">3.5 Structuring the meaning: complex design Process</span></span>
+            </span>
+
+            <span class="tc-head">
+                <span class="ts-text link">4. Designer, the future innovators </span>
+                <span class="tc-subhead link"><span  class="ts-text">4.1 Designer as a director</span></span>
+                <span class="tc-subhead link"><span  class="ts-text">4.2 Design in behavioral environment </span></span>
+                <span class="tc-subhead link" style="height: 10%"><span  class="ts-text">4.3 To sum up: Design as a Metadata</span></span>
+            </span>
+
+        </div>
+    </nav>
 
     <!-- content -->
     <section id="content-wrapper">
-        <article id="content">
+
+        <article id="intro">
+            <h1 class="title c5" id="title">Design as<br/>Metadata</h1>
+            <br><br><br>
+            <h1 id="abstract" class="c17 c2">Today the web has faced designers with a new paradigm in which the prior reader has become the user —the person who experiences the web content; produces content as well as consumes it. Therefore the user experiences and intentionality has transcended more than ever meaning the graphic designer has to become the future innovator in order to affect the message. Hence within my thesis in order to reflect upon the agency of the designer in contents of the web future; I propose an idea about implementation of design within the content as a metadata.</h1>
+            <br><br><br>
+        </article>
+
+
+        <article class="" id="content">
             <p class="c2 title c17" id="h.cj4faxs6v1ff"><span>1. Introduction</span></p>
             <p class="c1"><span class="c17 c11"></span></p>
             <h1 class="c17 c2" id="h.eckkw0uouqt5"><span>The practice of graphic design is rapidly changing through immediate developments in technology. </span><span class="highlight"><span>Thus the conventional equation between the designer and content as well as the position of &nbsp;</span><span class="c4">author</span><span>&nbsp;in respect to both of them.</span><sup><span ref="ref1" id="cmnt_ref1">[1]</span></sup></span><span>&nbsp;Having said that,the substantial key point is in the meaning of the design work being interpreted. Today the web has faced designers with a new paradigm in which the prior reader has become the user —the person who experiences the web content; produces content as well as consumes it. Therefore the user experiences and intentionality has transcended more than ever meaning the graphic designer has to become the future innovator in order to affect the message.</span></h1>
@@ -291,7 +325,7 @@
     <hr style="page-break-before: always; display: none; -webkit-user-select: text;">
 
     <!--sidebar-->
-    <section id="sidebar">
+    <section class="" id="sidebar">
 
         <figure class="ref_wrapper" name="figures" id="ref1">
             <img alt="egg.png" src="images/image06.png" original_width="805" original_height="548">
@@ -438,9 +472,6 @@
             <figcaption><span class="ref_number">44. </span><span class="c0">Saga project</span></figcaption>
         </figure>
     </section>
-
-
-
 
     </body>
 

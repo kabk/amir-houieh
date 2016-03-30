@@ -10,6 +10,7 @@ body {
     line-height: 23.2px;
 }
 
+
 /*GENERAL*/
 section {
     float: left;
@@ -38,16 +39,12 @@ article#content, #intro {
     transition: transform 0.5s ease-in-out;
 }
 
-/*section#content-wrapper {*/
-    /*margin-top: 100%;*/
-/*}*/
-   #content-wrapper.off{
-       -ms-transform: translateX(-220px); /* IE 9 */
-       -webkit-transform: translateX(-220px); /* Safari */
-       transform: translateX(-220px);
-   }
+#content-wrapper.off{
+    -ms-transform: translateX(-220px); /* IE 9 */
+    -webkit-transform: translateX(-220px); /* Safari */
+    transform: translateX(-220px);
+}
 article#content{
-    /* margin-top: 100%; */
     background: white;
 }
 
@@ -82,6 +79,8 @@ section#content-wrapper {
     max-width: 794px;
     background: #fff;
     box-shadow: 0 0 0 0.75pt #d1d1d1,0 0 3pt 0.75pt #ccc;
+    z-index: 9999;
+    /*position: absolute;*/
 }
 .ref_wrapper{
     background: white;
@@ -95,10 +94,20 @@ figcaption {
     margin-top: 1em;
 }
 
+.marker{
+    cursor: pointer;
+}
+
+.marker:hover{
+    background: yellow;
+}
+
+.marker.highlight{
+    background: blue;
+}
 
 /*HEADER*/
 div#tc-content {
-    /* display: none; */
     font-size: small;
 }
 
@@ -109,7 +118,7 @@ header {
     width: 60%;
     max-width: 794px;
 
-    height: 150px;
+    height: 100px;
     position: fixed;
 }
 
@@ -123,72 +132,124 @@ h1#title *{
 
 article#intro {
     height: 100%;
-    position: fixed;
-    z-index: -1;
+    margin-top: 100px;
 }
 
-#intro {
-    margin-top: 150px;
+article#intro *{
+    color: blue;
 }
-
 
 /*nav panel*/
-nav {
-    position: fixed;
-    width: 220px;
+nav#site-nav{
+    margin-left: 4%;
+    padding-right: 7%;
+    padding-top: 6pt;
+}
+nav#site-nav *{
+    font-family: sans-serif !important;
+    display: inline-block;
+    color: blue;
+}
+ul#tolbar {
+    float: right;
 }
 
-#tc-content>div {
+li#extbar {
+    margin-right: 36px;
+}
+
+.link{cursor: pointer;}
+.link:hover{text-decoration: underline}
+
+a.link {
+    text-decoration: none;
+}
+a.link:after {content: "\00a0.\00a0";}
+
+
+/*NAV BAR*/
+nav#navbar {
+    position: fixed;
+    color: blue;
+    max-width: 200px;
+}
+
+div#tc-content * {
     display: block;
 }
 
 span.tc-subhead {
-    display: block;
     margin-left: 12px;
 }
 
-span.tc-head:before {
-    content: "\A\A";
-    display: block;
+span.tc-subhead:last-child {
+    margin-bottom: 1em;
 }
 
-
-div#tc-content.off .ts-text {
-    /*opacity: 0;*/
+nav#navbar * {
+    font-family: sans-serif;
+}
+nav#navbar.mobile{
+    right: 0;
+    background: white
+}
+#navbar.mobile div#tc-content {
     display: none;
 }
 
-#tc-content.off>div {
-    border-bottom: 3px solid yellow;
-}
-
-#tc-content.off span.tc-subhead {
-    border-bottom: 1px solid green;
-}
-
-nav.close {
-    background: white;
-    box-shadow: 0 0 0 0.75pt #d1d1d1,0 0 3pt 0.75pt #ccc;
-    width: 25px;
-
-}
-
-div#navHandlers {
-    width: 25px;
-    height: 25px;
+#navbar.mobile div#mobile-handler {
     position: absolute;
-    background: blue;
+    z-index: 99999;
+    right: 0;
 }
 
+div#mobile-handler{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+div#mobile-handler:hover{
+    color: black;
+}
+
+nav#navbar.unfold {
+    width: 32px;
+    background: white;
+    overflow: hidden;
+}
+
+nav#navbar.unfold #tc-content {
+    display: none;
+}
+
+span.marker {
+    display: block;
+    border-bottom: 1px solid;
+}
+
+div#bar {
+    height: 100%;
+    position: fixed;
+    width: 20px;
+    background: white;
+    z-index: -1;
+}
+
+span.marker-text {
+    opacity: 0;
+}
+
+
+/*tags*/
+span.tag {
+    display: block;
+}
 
 .tagwrapper {
     position: absolute;
     font-size: 10px;
     color: blue;
-}
-
-span.tag {
-    display: block;
 }
 
 
@@ -219,6 +280,11 @@ span.tag {
         font-size: 18pt !important;
     }
 
+
+    h1.title .glyph{
+        font-size: 32pt !important;
+    }
+
 }
 
 @media all and (max-width: 760px){
@@ -234,6 +300,11 @@ span.tag {
 
     .c17 {
         font-size: 18pt !important;
+    }
+
+
+    h1.title .glyph{
+        font-size: 32pt !important;
     }
 
     article#content,#intro {
@@ -252,6 +323,14 @@ span.tag {
 
 
 @media all and (max-width: 420px){
+
+    h1.title .glyph{
+        font-size: 22pt !important;
+    }
+
+    h1#abstract{
+        font-size: 12pt !important;
+    }
 
     .c17 {
         font-size: 14pt !important;

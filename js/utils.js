@@ -34,7 +34,6 @@ function randomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
-Number.prototype.remap = function ( in_min , in_max , out_min , out_max ) {
-  return( this - in_min ) * ( out_max - out_min ) / ( in_max - in_min ) + out_min;
+function remapFloat( number, in_min , in_max , out_min , out_max ){
+    return( number - in_min ) * ( out_max - out_min ) / ( in_max - in_min ) + out_min;
 }

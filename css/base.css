@@ -127,3 +127,7 @@ h2 {
 .hide{
     display: none;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
