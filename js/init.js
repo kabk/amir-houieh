@@ -238,6 +238,64 @@ $(function(doc) {
     }
 
 
+    function parseSpacialTags(){
+
+
+        var regex_href = /(http|ftp|https:\/\/[\w\-_]+\.{1}[\w\-_]+)+([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?/gi;
+        var regex_capitalChain = /([A-Z][\w-]*(\s+[A-Z][\w-]*)+)/;
+
+        function wrapAnchorTag(text) {
+
+            return text.replace(regex_href,function(href){
+                var a = document.createElement("a");
+                a.href = href;
+                a.className = "link"
+                a.text = a.hostname;
+                a.title = href;
+                return a.outerHTML;
+            });
+
+        }
+
+
+        function wrapCapitals(text){
+
+            return text.replace(regex_capitalChain,'<a style="color: black !important;" target="_blank" class="capital" href="https://en.wikipedia.org/w/index.php?search=$1">$1</a>');
+
+        }
+
+        refs.each(function(){
+
+            $(this).find('*').each(function(){
+
+                for(var x=0; x<this.childNodes.length;x++){
+                    if( this.childNodes[x].nodeType == 3 ){
+                        var _parentNode = this.childNodes[x].parentNode;
+                        var txt = this.childNodes[x].nodeValue;
+                        _parentNode.innerHTML =  wrapAnchorTag( txt )
+                        _parentNode.innerHTML = wrapCapitals( _parentNode.innerHTML );
+
+                    }
+                }
+
+
+
+            })
+
+        });
+
+
+        $('span.c4').each(function(){
+
+            this.innerHTML = wrapCapitals( this.innerHTML )
+        })
+
+
+
+    }
+
+    parseSpacialTags();
+
     function attachEvents(){
 
 

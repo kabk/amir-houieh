@@ -72,9 +72,14 @@ img {
 
 .ref_wrapper * {
     font-family: Andale Mono,AndaleMono,monospace;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 1em;
 }
+
+.ref_wrapper span.capital{
+    text-decoration: underline;
+}
+
 
 section#content-wrapper {
     width: 60%;
@@ -91,6 +96,10 @@ section#content-wrapper {
     position: absolute;
     padding: 10px;
     cursor: default;
+}
+
+span.ref_number {
+    color: blue;
 }
 
 figcaption {
@@ -115,7 +124,7 @@ div#tc-content {
 }
 
 header {
-    font-size: 12px;
+    font-size: 10px;
     font-family: Andale Mono,AndaleMono,monospace;
     z-index: 99999;
     width: 60%;
@@ -195,6 +204,7 @@ span.tc-subhead:last-child {
 
 nav#navbar * {
     font-family: Andale Mono,AndaleMono,monospace;
+    font-size: 10px;
     line-height: 1.4em;
 
 }
