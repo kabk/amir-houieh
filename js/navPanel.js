@@ -12,6 +12,7 @@ var MODULES = (function(){
         var margin = 12;
         var isFolded = false;
         var barPosLeft = 0;
+        var itisInitilized = false;
 
         var markerPos = [];
 
@@ -33,7 +34,8 @@ var MODULES = (function(){
 
         self.onScroll = function(scrollTop, maxScrollTop){
 
-            if(scrollTop<= window.innerHeight-200){
+            if(scrollTop<= window.innerHeight-200 && itisInitilized){
+
                 self.show();
             }
 
@@ -161,6 +163,8 @@ var MODULES = (function(){
         self.goTo = function(){
 
             self.hide();
+
+            itisInitilized = true;
 
             var id = $(this).attr('ref');
             var scrollTop = $('#'+id).position().top - 100

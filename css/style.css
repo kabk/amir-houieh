@@ -253,6 +253,27 @@ span.tag {
 }
 
 
+section#sidebar-print {
+    width: 700px;
+}
+
+#sidebar-print.ref_wrapper {
+    width: 100%;
+}
+
+#sidebar-print img {
+    width: 100%;
+    height: auto;
+}
+
+#sidebar-print .ref_wrapper {
+    width: 500px;
+    margin-bottom: 2em;
+    display: block;
+    position: relative;
+}
+
+
 @media all and (max-width: 1260px) and (min-width: 960px) {
 
     section#content-wrapper, header {
@@ -322,6 +343,8 @@ span.tag {
 
 
 
+
+
 @media all and (max-width: 420px){
 
     h1.title .glyph{
@@ -341,3 +364,35 @@ span.tag {
     }
 
 }
+
+
+@media print {
+
+   #content-wrapper, #content{
+        display: block !important;
+        clear: both !important;
+   }
+
+   segment{
+       clear: both;
+   }
+
+    #sidebar{
+        display: hide !important;
+    }
+
+    #sidebar-print{
+        display: block !important;
+    }
+
+    .ref_wrapper{
+        position: relative;
+        top: 0;
+    }
+
+    body, html{
+        overflow: auto;
+    }
+
+}
+

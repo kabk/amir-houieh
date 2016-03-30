@@ -2,8 +2,10 @@
 $(function(doc) {
 
 	var sidebar = $('#sidebar');
-	var figures = $('figure');
-	var refs = $('.ref_wrapper');
+    var sideBarPrint = sidebar.clone().attr('id', 'siderbar-print');
+
+    var figures = $('figure');
+	var refs = $('#sidebar .ref_wrapper');
 	var contentWrapper = $('#content-wrapper');
 	var header = $('header');
     var title =  $('#title');
@@ -235,8 +237,11 @@ $(function(doc) {
         nav.initBar( segmentPos, segmentHeights, totalHeight );
     }
 
+
     function attachEvents(){
 
+
+        sideBarPrint.attr('id', 'sidebar-print');
 
         splitTitleIntoGlyphs();
 
@@ -267,6 +272,9 @@ $(function(doc) {
 
 
     (function init(){
+
+        sideBarPrint.hide().appendTo($('body'))
+
         attachEvents();
         markSegments();
         onResize();
