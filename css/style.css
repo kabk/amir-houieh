@@ -76,8 +76,8 @@ img {
     line-height: 1em;
 }
 
-.ref_wrapper span.capital{
-    text-decoration: underline;
+.ref_wrapper a.capital{
+    text-decoration: underline !important;
 }
 
 
