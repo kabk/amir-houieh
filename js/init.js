@@ -286,10 +286,8 @@ $(function(doc) {
 
 
         $('span.c4').each(function(){
-
             this.innerHTML = wrapCapitals( this.innerHTML )
         })
-
 
 
     }
