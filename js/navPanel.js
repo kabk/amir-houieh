@@ -80,6 +80,7 @@ var MODULES = (function(){
             barPosLeft = contentW
             bar.css({
                 height: window.innerHeight / 2,
+                top: (window.innerHeight - (window.innerHeight / 2)) /2,
                 left: barPosLeft - bar.width()
             })
 
